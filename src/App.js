@@ -30,8 +30,8 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    showDeck && handleCardsRequest(deck);
-  }, [showDeck]);
+    if(deck) handleCardsRequest(deck);
+  }, [deck]);
 
   return (
     <div className="main-container">
